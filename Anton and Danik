@@ -1,0 +1,19 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    char ch;
+    int n;
+    cin>>n;
+    int cnta = 0, cntd = 0;
+    for(int i = 0;i<n;i++){
+        cin>>ch;
+        if(ch=='A') cnta++;
+        else cntd++;
+    }
+    if(cnta>cntd) cout<<"Anton";
+    else if(cnta<cntd) cout<<"Danik";
+    else cout<<"Friendship";
+    return 0;
+}
