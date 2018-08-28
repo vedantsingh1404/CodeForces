@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string.h>
+
+
+using namespace std;
+
+int main() {
+    char name[101];
+    cin.getline(name, 101);
+    
+    int alpha[26] = {0};
+    
+    for(int i = 0;i<strlen(name);i++) {
+        int  x = int(name[i]);
+        if(alpha[x-97] == 0) alpha[x-97] = 1;
+    }
+    
+    int sum = 0;
+    for(int i = 0;i<26;i++) {
+        sum += alpha[i];
+    }
+    if(sum%2 == 0) {
+        cout<<"CHAT WITH HER!";
+    }
+    else {
+        cout<<"IGNORE HIM!";
+    }
+    return 0;
+}
