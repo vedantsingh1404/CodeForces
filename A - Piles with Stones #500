@@ -1,0 +1,27 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+    int n;
+    
+    int a[50];
+    int b[50];
+    
+    cin>>n;
+    for(int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    for(int i = 0; i < n; i++) {
+        cin >> b[i];
+    }
+    int pos = 0, neg = 0;
+    for(int i = 0;i < n;i++) {
+        if(b[i] - a[i] < 0) neg += a[i] - b[i];
+        else pos += b[i] - a[i];
+    }
+    
+    if(neg >= pos) cout<<"YES";
+    else cout << "NO";
+    return 0;
+}
