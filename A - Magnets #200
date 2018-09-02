@@ -1,0 +1,26 @@
+#include<iostream>
+
+#define ll long long int
+
+using namespace std;
+
+int main() {
+    ll n;
+    cin >> n;
+    
+    ll magnet[100001] ;
+    
+    for(ll i = 0;i<n;i++) {
+        cin>>magnet[i];
+        
+    }
+    
+    ll cnt = 0;
+    
+    for(ll i = 0;i<n-1;i++) {
+        if(magnet[i] != magnet[i+1]) cnt++;
+    }
+    
+    cout<<cnt+1;
+    return 0;
+}
