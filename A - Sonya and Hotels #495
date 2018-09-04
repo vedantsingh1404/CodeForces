@@ -1,0 +1,28 @@
+#include<iostream>
+#include<math.h>
+
+#define ll long long int
+
+using namespace std;
+
+int main() {
+    int n;
+    ll d;
+    cin >> n >> d;
+    
+    ll hotels[100];
+    
+    for(int i = 0;i < n;i ++) {
+        cin >> hotels[i];
+    }
+    int cnt = 0;
+    for(int i = 0;i < n -1; i++) {
+        if(hotels[i+1] - hotels[i] > 2*d) cnt += 2;
+        else if (hotels[i+1] - hotels[i] == 2*d) cnt += 1;
+        else cnt += 0;
+        
+    }
+    
+    cout << cnt+2;
+    return 0;
+}
