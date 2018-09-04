@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string.h>
+
+
+using namespace std;
+
+int main() {
+    char string[101];
+    cin.getline(string,100);
+    int i = 0;
+    while(i >= 0 && i < strlen(string)) {
+        int k = string[i] - 96 ;
+        int l = string[i+1] - 96 ;
+        if(k == 1 || k == 5 || k == 9 || k == 15 || k == 21 || k == 14) i++ ;
+        else {
+            if(l == 1 || l == 5 || l == 9 || l == 15 || l == 21) i++;
+            else i = -100;
+        }
+    }
+    
+    if(i == -100) cout << "NO";
+    else cout << "YES";
+    
+    return 0;
+    
+}
