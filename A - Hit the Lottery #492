@@ -1,0 +1,21 @@
+#include<iostream>
+#define ll long long int
+
+using namespace std;
+
+int main() {
+    ll n;
+    
+    cin >> n;
+    int a[5] = {1, 5, 10, 20, 100};
+    
+    ll notes = 0;
+    
+    for(int i = 4;i >= 0;i --) {
+            notes += n / a[i];
+            n = n % a[i];
+    }
+    
+    cout << notes;
+    
+}
