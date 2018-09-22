@@ -16,4 +16,5 @@ int main() {
     else if(link == 0) cout << "YES";
     else if(link % pearl == 0) cout << "YES";
     else cout << "NO";
+    return 0;
 }
